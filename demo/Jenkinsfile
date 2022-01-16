@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build....'
+                git branch: 'master',
+                    credentialsId: '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',
+                    url: 'https://github.com/BlueVT1437/demo.git'
+
+                // git clone https://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@github.com/BlueVT1437/kiettt-app.git demo-app
+                // sh '''
+                // ls -lat
+                // cd demo-app
+                // sudo npm i
+                // npm start
+                // '''
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                // sh '''
+                // npm install -g serve
+                // serve -s build
+                // '''
+            }
+        }
+    }
+}
