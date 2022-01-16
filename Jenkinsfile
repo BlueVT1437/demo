@@ -12,7 +12,7 @@ pipeline {
                 sh '''
                 ls -lat
                 cd my-app
-                npm run
+                npm start
                 '''
                 // git clone https://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@github.com/BlueVT1437/demo.git my-app
                 // sudo npm i
