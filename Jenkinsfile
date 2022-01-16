@@ -12,10 +12,10 @@ pipeline {
                 sh '''
                 ls -lat
                 cd my-app
+                npm run
                 '''
                 // git clone https://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@github.com/BlueVT1437/demo.git my-app
                 // sudo npm i
-                // npm run
             }
         }
         stage('Test') {
