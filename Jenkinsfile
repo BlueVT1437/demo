@@ -10,11 +10,12 @@ pipeline {
                     url: 'https://github.com/BlueVT1437/demo.git'
 
                 sh '''
-                git clone https://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@github.com/BlueVT1437/demo.git my-app
                 ls -lat
                 cd my-app
-                sudo npm i
                 '''
+                // git clone https://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@github.com/BlueVT1437/demo.git my-app
+                // sudo npm i
+                // npm run
             }
         }
         stage('Test') {
